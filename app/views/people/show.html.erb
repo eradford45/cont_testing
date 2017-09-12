@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hair color:</strong>
+  <%= @person.hair_color %>
+</p>
+
+<p>
+  <strong>Eye color:</strong>
+  <%= @person.eye_color %>
+</p>
+
+<p>
+  <strong>Alive:</strong>
+  <%= @person.alive %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

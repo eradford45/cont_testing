@@ -76,14 +76,14 @@ RSpec.describe PeopleController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {eye_color: 'gray'}
       }
 
       it "updates the requested person" do
         person = Person.create! valid_attributes
         put :update, params: {id: person.to_param, person: new_attributes}, session: valid_session
         person.reload
-        skip("Add assertions for updated state")
+        expect(person.eye_color).to eq(new_attributes[:eye_color])
       end
 
       it "redirects to the person" do
